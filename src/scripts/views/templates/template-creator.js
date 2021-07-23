@@ -119,7 +119,7 @@ const createLikeButtonTemplate = () => `
 `;
 
 const createLikedButtonTemplate = () => `
-  <button aria-label="like this cafe" id="likeButton" class="like">
+  <button aria-label="unlike this cafe" id="likeButton" class="like">
     <i class="fa fa-heart" aria-hidden="true"></i>
   </button>
 `;
