@@ -1,7 +1,7 @@
 import UrlParser from '../../routes/url-parser';
 import TheCafeDbSource from '../../data/thecafedb-source';
 import { createCafeDetailTemplate } from '../templates/template-creator';
-import LikeButtonInitiator from '../../utils/like-button-initiator';
+import LikeButtonPresenter from '../../utils/like-button-presenter';
 
 const Detail = {
   async render() {
@@ -31,7 +31,7 @@ const Detail = {
         cafeName.innerHTML = '<p>Not Found</p>';
       }
 
-      await LikeButtonInitiator.init({
+      await LikeButtonPresenter.init({
         likeButtonContainer: document.querySelector('#likeButtonContainer'),
         cafe,
       });
