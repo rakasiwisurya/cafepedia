@@ -2,6 +2,7 @@ import UrlParser from '../../routes/url-parser';
 import TheCafeDbSource from '../../data/thecafedb-source';
 import { createCafeDetailTemplate } from '../templates/template-creator';
 import LikeButtonPresenter from '../../utils/like-button-presenter';
+import FavoriteCafeIdb from '../../data/favorite-cafe-idb';
 
 const Detail = {
   async render() {
@@ -33,6 +34,7 @@ const Detail = {
 
       await LikeButtonPresenter.init({
         likeButtonContainer: document.querySelector('#likeButtonContainer'),
+        favoriteCafes: FavoriteCafeIdb,
         cafe,
       });
     } catch (error) {

@@ -21,7 +21,6 @@ const FavoriteCafeArray = {
       return;
     }
  
-    // pastikan id ini belum ada dalam daftar favoriteMovies
     if (this.getCafe(cafe.id)) {
       return;
     }
@@ -30,8 +29,6 @@ const FavoriteCafeArray = {
   },
  
   deleteCafe(id) {
-    // cara boros menghapus film dengan meng-copy film yang ada
-    // kecuali film dengan id == id
     favoriteCafes = favoriteCafes.filter((cafe) => cafe.id != id);
   },
 };
