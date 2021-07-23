@@ -1,0 +1,10 @@
+:root {
+  --trans-cubic: cubic-bezier(0.18, 0.89, 0.32, 1.28) 0.9s;
+  --grass-green: #6f7064;
+  --dark-green: #677903;
+  --black-calm: #212121;
+  --smooth-brown: #926e6f;
+  -smooth-pink: #ca8a8b;
+  --cream: #e6c4c0;
+  --white: #ffffff;
+}
