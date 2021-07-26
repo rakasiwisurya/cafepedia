@@ -33,7 +33,7 @@ const createCafeDetailTemplate = (cafe) => {
 
   return `
   <div class="single__img">
-    <img tabindex="0" src="${CONFIG.IMG_MED + cafe.pictureId}" alt="${cafe.name}" crossorigin="anonymous">
+    <img tabindex="0" class="lazyload" data-src="${CONFIG.IMG_MED + cafe.pictureId}" alt="${cafe.name}" crossorigin="anonymous">
     <div class="like"></div>
   </div>
   <div class="single__content">
@@ -95,7 +95,7 @@ const createCafeDetailTemplate = (cafe) => {
 const createCafeItemTemplate = (cafe) => `
     <article class="post-item" tabindex="0">
         <div class="post-item__card">
-            <img tabindex="0" class="post-item__thumbnail" src="${CONFIG.IMG_SMALL + cafe.pictureId}" alt="${cafe.name}" crossorigin="anonymous">
+            <img tabindex="0" class="post-item__thumbnail lazyload" data-src="${CONFIG.IMG_SMALL + cafe.pictureId}" alt="${cafe.name}" crossorigin="anonymous">
             <div class="post-item__location">
                 <h2>${cafe.city}</h2>
             </div>

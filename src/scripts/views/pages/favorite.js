@@ -23,10 +23,15 @@ const Favorite = {
     try {
       const cafes = await FavoriteCafeIdb.getAllCafes();
       title.innerHTML = 'Favorite Cafes';
-
-      cafes.forEach((cafe) => {
-        cafesContainer.innerHTML += createCafeItemTemplate(cafe);
-      });
+      
+      if(cafes.length) {
+        cafes.forEach((cafe) => {
+          cafesContainer.innerHTML += createCafeItemTemplate(cafe);
+        });
+      } else {
+        cafesContainer.classList.remove('posts');
+        cafesContainer.innerHTML += '<div class="post-item__not__found">You dont have any favorite cafe yet.</div>';
+      }
     } catch (error) {
       title.innerHTML = '<p>Connection Error</p>';
     }

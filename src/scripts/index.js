@@ -4,6 +4,8 @@ import '../styles/responsive.css';
 import '../styles/variable.css';
 import App from './views/app';
 import swRegister from './utils/sw-register';
+import 'lazysizes';
+import 'lazysizes/plugins/parent-fit/ls.parent-fit';
 
 const app = new App({
   button: document.querySelector('#menu'),
@@ -19,21 +21,3 @@ window.addEventListener('load', () => {
   app.renderPage();
   swRegister();
 });
-
-// const menu = document.querySelector('#menu');
-// const hero = document.querySelector('.hero');
-// const main = document.querySelector('main');
-// const drawer = document.querySelector('#drawer');
-
-// menu.addEventListener('click', (event) => {
-//   drawer.classList.toggle('open');
-//   event.stopPropagation();
-// });
-
-// hero.addEventListener('click', () => {
-//   drawer.classList.remove('open');
-// });
-
-// main.addEventListener('click', () => {
-//   drawer.classList.remove('open');
-// });

@@ -153,7 +153,7 @@ li {
     width: 100%;
     margin: 0 auto;
     text-align: center;
-    background-image: url("/images/heros/hero.jpg");
+    background-image: url("/images/hero-small.jpg");
     background-position: center;
     background-color: var(--dark-green);
     background-size: cover;
@@ -311,6 +311,11 @@ main {
     margin-top: 16px;
     font-size: 12px;
     line-height: 1.5em;
+}
+
+.post-item__not__found {
+    margin: 35px auto 0;
+    text-align: center;
 }
 
 /*

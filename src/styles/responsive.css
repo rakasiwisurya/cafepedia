@@ -82,6 +82,10 @@
 }
 
 @media screen and (min-width: 650px) {
+  .hero {
+    background-image: url("/images/hero-large.jpg");
+  }
+
   .post-item__content {
     padding: 16px 32px 32px 32px;
   }
