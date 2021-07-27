@@ -11,6 +11,9 @@ const app = new App({
   button: document.querySelector('#menu'),
   drawer: document.querySelector('#drawer'),
   content: document.querySelector('#maincontent'),
+  body: document.querySelector('body'),
+  main: document.querySelector('main'),
+  menus: document.querySelectorAll('.nav__item a')
 });
 
 window.addEventListener('hashchange', () => {

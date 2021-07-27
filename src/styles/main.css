@@ -198,7 +198,7 @@ main {
  */
 
 .content {
-    padding: 90px 32px;
+    padding: 90px 32px 32px;
 }
 
 /*
@@ -377,7 +377,7 @@ footer {
 
 .single__review,
 .single__content {
-    margin: 2rem auto;
+    margin: 0.5rem auto 2rem;
     text-align: left;
 }
 
