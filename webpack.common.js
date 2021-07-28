@@ -5,12 +5,16 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ServiceWorkerWebpackPlugin = require('serviceworker-webpack-plugin');
 const ImageminWebpackPlugin = require('imagemin-webpack-plugin').default;
 const ImageminMozjpeg = require('imagemin-mozjpeg');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
+
+const devMode = process.env.NODE_ENV !== 'production';
 
 module.exports = {
   entry: path.resolve(__dirname, 'src/scripts/index.js'),
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js',
+    filename: '[name].bundle.js',
   },
   optimization: {
     splitChunks: {
@@ -33,7 +37,7 @@ module.exports = {
           reuseExistingChunk: true
         }
       }
-    }
+    },
   },
   module: {
     rules: [
@@ -41,14 +45,12 @@ module.exports = {
         test: /\.css$/,
         use: [
           {
-            loader: 'style-loader',
+            loader: MiniCssExtractPlugin.loader
           },
-          {
-            loader: 'css-loader',
-          },
-        ],
-      },
-    ],
+          'css-loader?url=false'
+        ]
+      }
+    ]
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -61,7 +63,8 @@ module.exports = {
           from: path.resolve(__dirname, 'src/public/'),
           to: path.resolve(__dirname, 'dist/'),
           globOptions: {
-            ignore: ['**/images/**'], // CopyWebpackPlugin mengabaikan berkas yang berada di dalam folder images
+            ignore: ['**/images/**'],
+            // CopyWebpackPlugin mengabaikan berkas yang berada di dalam folder images
           },
         },
       ],
@@ -77,5 +80,17 @@ module.exports = {
         }),
       ],
     }),
+    new MiniCssExtractPlugin({
+      filename: devMode ? '[name].css' : '[name].[contenthash].css',
+      chunkFilename: devMode ? '[id].css' : '[id].[contenthash].css'
+    }),
+    new OptimizeCSSAssetsPlugin({
+      assetNameRegExp: /\.optimize\.css$/g,
+      cssProcessor: require('cssnano'),
+      cssProcessorPluginOptions: {
+        preset: ['default', { discardComments: { removeAll: true } }],
+      },
+      canPrint: true
+    })
   ],
 };

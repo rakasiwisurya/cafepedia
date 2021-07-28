@@ -240,6 +240,12 @@ main {
     padding: 16px;
 }
 
+.post-item__card img {
+    object-fit: cover;
+    object-position: center;
+    max-height: 208px;
+}
+
 .post-item__card,
 .post-item__card img {
     transition: var(--trans-cubic);
@@ -256,6 +262,7 @@ main {
 
 .post-item__thumbnail {
     width: 100%;
+    height: 208px;
     max-height: 208px;
 }
 
@@ -267,6 +274,10 @@ main {
     border-radius: 0 10px 10px 0;
     transition: var(--trans-cubic);
     display: flex;
+}
+
+.post-item__location-detail {
+    top: 17rem !important;
 }
 
 .post-item__location h2 {
@@ -370,8 +381,8 @@ footer {
     width: 100%;
     object-fit: cover;
     object-position: center;
+    max-height: 380px;
     border-radius: .75rem;
-    max-height: 200px;
 }
 
 .single__menu .post-item__content-title,

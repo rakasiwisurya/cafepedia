@@ -33,9 +33,9 @@ const createCafeDetailTemplate = (cafe) => {
 
   return `
   <div class="single__img">
-    <img tabindex="0" class="lazyload" height="200" width="100%" data-src="${CONFIG.IMG_MED + cafe.pictureId}" alt="${cafe.name}" crossorigin="anonymous">
+    <img tabindex="0" class="lazyload" height="380" width="100%" data-src="${CONFIG.IMG_MED + cafe.pictureId}" alt="${cafe.name}" crossorigin="anonymous">
     <div class="like"></div>
-    <div class="post-item__location">
+    <div class="post-item__location post-item__location-detail">
       <span>
         <i class="fa fa-star"></i>
       </span>
@@ -113,7 +113,7 @@ const createCafeDetailTemplate = (cafe) => {
 const createCafeItemTemplate = (cafe) => `
     <article class="post-item" tabindex="0">
         <div class="post-item__card">
-            <img tabindex="0" class="post-item__thumbnail lazyload" height="225" width="100%" data-src="${CONFIG.IMG_SMALL + cafe.pictureId}" alt="${cafe.name}" crossorigin="anonymous">
+            <img tabindex="0" class="post-item__thumbnail lazyload" height="208" width="100%" data-src="${CONFIG.IMG_SMALL + cafe.pictureId}" alt="${cafe.name}" crossorigin="anonymous">
             <div class="post-item__location">
               <span>
                 <i class="fa fa-map-marker fa-map-marker-1"></i>
