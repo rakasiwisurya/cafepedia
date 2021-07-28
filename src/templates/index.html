@@ -10,10 +10,12 @@
   <link rel="apple-touch-icon" href="/icons/icon-192x192.png">
   <link rel="manifest" href="manifest.json">
   <link rel="icon" href="favicon.ico">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous">
-  <script src="https://use.fontawesome.com/b070c8f1df.js"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="preload" crossorigin="anonymous" href="https://fonts.googleapis.com/css?family=Poppins&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
+  <noscript>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins&display=swap"/>
+  </noscript>
   <title>Cafepedia - Cafe Catalogue</title>
 </head>
 
@@ -27,7 +29,9 @@
       </a>
 
       <button id="menu" class="header__menu" aria-label="button to open side menu">
-        ☰
+        <span>
+          <i class="fa fa-bars"></i>
+        </span>
       </button>
 
       <nav id="drawer" class="nav">

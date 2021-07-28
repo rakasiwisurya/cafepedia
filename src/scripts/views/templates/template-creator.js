@@ -33,28 +33,46 @@ const createCafeDetailTemplate = (cafe) => {
 
   return `
   <div class="single__img">
-    <img tabindex="0" class="lazyload" data-src="${CONFIG.IMG_MED + cafe.pictureId}" alt="${cafe.name}" crossorigin="anonymous">
+    <img tabindex="0" class="lazyload" height="200" width="100%" data-src="${CONFIG.IMG_MED + cafe.pictureId}" alt="${cafe.name}" crossorigin="anonymous">
     <div class="like"></div>
+    <div class="post-item__location">
+      <span>
+        <i class="fa fa-star"></i>
+      </span>
+      <h2 tabindex="0">${cafe.rating}</h2>
+    </div>
   </div>
   <div class="single__content">
     <article tabindex="0" class="post-item">
         <div class="post-item__content">
             <p class="post-item__description">
-                <b tabindex="0">Categories : </b>
+
+              <span class="post-item__detail-title">
+                <i class="fa fa-spoon"></i>
+                <i class="fa fa-spoon fa-mr-5"></i>
+              </span>
+              <span tabindex="0"><b> ${cafeCategories} </b></span>
+
+              <br><br>
+
+              <span class="post-item__detail-title">
+                <i class="fa fa-map-marker fa-mr-5"></i>
+              </span>
+              <span tabindex="0"><b> ${cafe.address}, ${cafe.city} </b></span>
+
+              <br><br>
+                
+              <span>
+                <span class="post-item__detail-title">
+                  <i class="fa fa-sticky-note fa-mr-5"></i>
+                </span>
+                <span>
+                  <b tabindex="0">Description : </b>
+                </span>
                 <br>
-                <span tabindex="0"> ${cafeCategories} </span>
-                <br><br>
-                <b tabindex="0">Rating : </b>
-                <br>
-                <span tabindex="0"> ${cafe.rating} </span>
-                <br><br>
-                <b tabindex="0">Address : </b>
-                <br>
-                <span tabindex="0"> ${cafe.address}, ${cafe.city} </span>
-                <br><br>
-                <b tabindex="0">Description : </b>
                 <br>
                 <span tabindex="0"> ${cafe.description} </span>
+              </span>
             </p>
         </div>
     </article>
@@ -95,9 +113,12 @@ const createCafeDetailTemplate = (cafe) => {
 const createCafeItemTemplate = (cafe) => `
     <article class="post-item" tabindex="0">
         <div class="post-item__card">
-            <img tabindex="0" class="post-item__thumbnail lazyload" data-src="${CONFIG.IMG_SMALL + cafe.pictureId}" alt="${cafe.name}" crossorigin="anonymous">
+            <img tabindex="0" class="post-item__thumbnail lazyload" height="225" width="100%" data-src="${CONFIG.IMG_SMALL + cafe.pictureId}" alt="${cafe.name}" crossorigin="anonymous">
             <div class="post-item__location">
-                <h2>${cafe.city}</h2>
+              <span>
+                <i class="fa fa-map-marker fa-map-marker-1"></i>
+              </span>
+              <h2>${cafe.city}</h2>
             </div>
         </div>
         <div class="post-item__content">
@@ -105,7 +126,12 @@ const createCafeItemTemplate = (cafe) => `
                 <h3 class="post-item__title">
                   <a href="${`/#/detail/${cafe.id}`}"> ${cafe.name} </a>
                 </h3>
-                <p class="post-item__rating">⭐️<span> ${cafe.rating} </span></p>
+                <p class="post-item__rating">
+                  <span>
+                    <i class="fa fa-star"></i>
+                  </span>
+                  ${cafe.rating}
+                </p>
             </div>
             <p tabindex="0" class="post-item__description">${cafe.description.substr(0, 200)}..</p>
         </div>

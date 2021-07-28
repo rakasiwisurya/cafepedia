@@ -198,7 +198,7 @@ main {
  */
 
 .content {
-    padding: 90px 32px 32px;
+    padding: 32px;
 }
 
 /*
@@ -273,6 +273,7 @@ main {
     font-weight: 600;
     margin: auto;
     font-size: 1.2em;
+    color: var(--dark-purple);
 }
 
 .post-item__title-rating {
@@ -299,10 +300,14 @@ main {
     align-items: center;
 }
 
+.post-item__detail-title {
+    color: var(--light-purple);
+}
+
 .post-item__rating {
     font-weight: 500;
     font-size: 0.7rem;
-    text-align: center;
+    text-align: left;
     display: flex;
     align-items: center;
 }
@@ -311,6 +316,7 @@ main {
     margin-top: 16px;
     font-size: 12px;
     line-height: 1.5em;
+    text-align: justify;
 }
 
 .post-item__not__found {
@@ -365,8 +371,7 @@ footer {
     object-fit: cover;
     object-position: center;
     border-radius: .75rem;
-    height: 380px;
-    max-height: 380px;
+    max-height: 200px;
 }
 
 .single__menu .post-item__content-title,
@@ -384,4 +389,32 @@ footer {
 .single__user-review {
     display: flex;
     flex-direction: column;
+}
+
+/*
+ * fa (font awesome)
+ */
+
+.fa-bars {
+    color: var(--grass-green);
+}
+
+.fa-map-marker-1 {
+    margin-right: 10px;
+    font-size: 2em;
+    color: var(--dark-purple);
+}
+
+.fa-star {
+    color: var(--yellow);
+    margin: 0 10px;
+    font-size: 1.75rem;
+}
+
+.fa-spoon {
+    margin-left: -3px;
+}
+
+.fa-mr-5 {
+    margin-right: 5px;
 }
