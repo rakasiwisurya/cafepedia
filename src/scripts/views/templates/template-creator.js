@@ -118,19 +118,19 @@ const createCafeItemTemplate = (cafe) => `
               <span>
                 <i class="fa fa-map-marker fa-map-marker-1"></i>
               </span>
-              <h2>${cafe.city}</h2>
+              <h2 tabindex="0">${cafe.city}</h2>
             </div>
         </div>
         <div class="post-item__content">
             <div class="post-item__title-rating">
                 <h3 class="post-item__title">
-                  <a href="${`/#/detail/${cafe.id}`}"> ${cafe.name} </a>
+                  <a tabindex="0" href="${`/#/detail/${cafe.id}`}"> ${cafe.name} </a>
                 </h3>
                 <p class="post-item__rating">
                   <span>
                     <i class="fa fa-star"></i>
                   </span>
-                  ${cafe.rating}
+                  <span tabindex="0">${cafe.rating}</span>
                 </p>
             </div>
             <p tabindex="0" class="post-item__description">${cafe.description.substr(0, 200)}..</p>
