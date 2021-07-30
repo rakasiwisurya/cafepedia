@@ -12,7 +12,7 @@ const app = new App({
   drawer: document.querySelector('#drawer'),
   content: document.querySelector('#maincontent'),
   body: document.querySelector('body'),
-  menus: document.querySelectorAll('.nav__item a')
+  menus: document.querySelectorAll('.nav__item a'),
 });
 
 window.addEventListener('hashchange', () => {

@@ -23,8 +23,8 @@ const Favorite = {
     try {
       const cafes = await FavoriteCafeIdb.getAllCafes();
       title.innerHTML = 'Favorite Cafes';
-      
-      if(cafes.length) {
+
+      if (cafes.length) {
         cafes.forEach((cafe) => {
           cafesContainer.innerHTML += createCafeItemTemplate(cafe);
         });

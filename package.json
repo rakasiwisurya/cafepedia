@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --config webpack.prod.js && node sharp.js",
+    "build": "webpack --config webpack.prod.js",
+    "build-image": "node sharp.js",
     "e2e": "codeceptjs run --steps",
     "start-dev": "webpack-dev-server --config webpack.dev.js",
     "test": "karma start"

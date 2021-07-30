@@ -8,10 +8,10 @@ const DrawerInitiator = {
       this._closeDrawer(event, drawer);
     });
 
-    menus.forEach(menu => {
+    menus.forEach((menu) => {
       menu.addEventListener('click', (event) => {
         this._closeDrawer(event, drawer);
-      }); 
+      });
     });
   },
 

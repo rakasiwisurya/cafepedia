@@ -12,24 +12,16 @@
         "sourceType": "module"
     },
     "rules": {
-        "linebreak-style": [
-            "off",
-            "windows"
-        ],
-        "eol-last": [
-            "off",
-            "always"
-        ],
-        "no-console": "off",
-        "no-underscore-dangle": "off",
-        "no-undef": "off",
-        "no-restricted-globals": [
-            "off",
-            "event",
-            "fdescribe"
-        ],
-        "import/extensions": [
-            "off"
-        ]
+        "import/no-extraneous-dependencies": 0,
+        "linebreak-style": 0,
+        "eol-last": 0,
+        "no-console": 0,
+        "no-underscore-dangle": 0,
+        "no-undef": 0,
+        "no-restricted-globals": 0,
+        "import/extensions": 0,
+        "consistent-return": 0,
+        "no-prototype-builtins": 0,
+        "object-curly-newline": 0
     }
 }
